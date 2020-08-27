@@ -6,7 +6,7 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:21 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/28 07:02:39 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/28 07:20:44 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@
 int		get_next_line(int fd, char **line);
 size_t	ft_strlen(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2, size_t s2_length);
-//char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
+void	super_free(char **p);
 
 #endif

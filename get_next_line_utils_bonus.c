@@ -6,7 +6,7 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:29 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/28 06:34:24 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/28 07:20:18 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char			*ft_strjoin(char const *s1, char const *s2, size_t s2_length)
 	t_index = ft_join(t, s1, t_index, ft_strlen(s1));
 	t_index = ft_join(t, s2, t_index, s2_length);
 	t[t_index] = '\0';
+	super_free(&s1);
 	return (t);
 }
 
@@ -72,36 +73,6 @@ char			*ft_strdup(const char *s)
 	t[i] = '\0';
 	return (t);
 }
-
-/*
-char			*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*t;
-	size_t	i;
-
-	if (!s)
-		return (0);
-	if (ft_strlen(s) <= start)
-	{
-		if (!(t = ft_strdup("")))
-			return (NULL);
-		return (t);
-	}
-	if (!(t = (char *)malloc((len + 1) * sizeof(char))))
-		return (0);
-	if (ft_strlen(s) - start < len)
-		len = ft_strlen(s) - start;
-	i = 0;
-	while (i < len)
-	{
-		t[i] = s[start];
-		i++;
-		start++;
-	}
-	t[i] = '\0';
-	return (t);
-}
-*/
 
 char	*ft_strchr(const char *s, int c)
 {
