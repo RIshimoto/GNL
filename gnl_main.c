@@ -27,6 +27,9 @@ int main(int argc, char **argv)
 	l = 0;
 	while (0 < (i = get_next_line(fd, &line)))
 	{
+		fd = open("special.txt", O_RDONLY);
+		printf("%d return flag : %d : '%s'\n", l, i, line);
+		fd = open("64bit_line.txt", O_RDONLY);
 		printf("%d return flag : %d : '%s'\n", l, i, line);
 		l++;
 		free(line);
