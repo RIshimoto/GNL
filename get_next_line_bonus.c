@@ -27,7 +27,8 @@ static int	line_joint(char **p, char **save, char **line)
 	{
 		if ((*line = ft_strjoin(*line, *p, nl - *p)) == NULL)
 			return (ERROR);
-		*save = ((*nl == '\0') ? NULL : nl + 1);
+		//*save = ((*nl == '\0') ? NULL : nl + 1);
+		*save = ft_substr(save, );
 		return (SUCESS);
 	}
 	if ((*line = ft_strjoin(*line, *p, ft_strlen(*p))) == NULL)
@@ -41,13 +42,15 @@ int			get_next_line(int fd, char **line)
 	//static char	*save;
 	static char	*save[1024];
 	ssize_t		read_size;
-	int			result;
+	int		result;
 
 	*line = ft_strdup("");
 	if (*line == NULL || fd < 0 || fd == 1 || fd == 2 || BUFFER_SIZE < 1)
 		return (ERROR);
+	//printf("save : %s\n", save[fd]);
+	//printf("fd : %d\n", fd);
 	if(save[fd] != NULL &&\
-			(result = line_joint(&save[fd], &save[fd], line)) != CONTINUE)
+		(result = line_joint(&save[fd], &save[fd], line)) != CONTINUE)
 		return (result);
 	if (!(buf = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1)))
 		return (ERROR);
@@ -55,7 +58,14 @@ int			get_next_line(int fd, char **line)
 	{
 		buf[read_size] = '\0';
 		if ((result = line_joint(&buf, &save[fd], line)) != CONTINUE)
+		{
+			//printf("1\n");
+			//printf("save : %s\n", save[fd]);
+			//printf("fd : %d\n", fd);
+			//printf("buf : %s\n", buf);
+			//super_free(&buf);
 			return (result);
+		}
 	}
 	super_free(&buf);
 	if (read_size < 0)
