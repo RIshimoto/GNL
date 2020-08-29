@@ -6,7 +6,7 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:29 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/30 05:21:21 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/30 05:24:44 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char			*ft_strdup(const char *s)
 	return (t);
 }
 
-char	*ft_strchr(const char *s, int c)
+char			*ft_strchr(const char *s, int c)
 {
 	char			*str;
 	unsigned char	uc;

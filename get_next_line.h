@@ -6,11 +6,11 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:21 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/30 04:51:14 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/30 05:24:11 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H 
+#ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
 # include <stdlib.h>
