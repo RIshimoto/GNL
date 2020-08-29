@@ -6,12 +6,11 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:14 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/30 05:11:43 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/30 05:20:41 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-#include <stdio.h>
 
 void		super_free(char **p)
 {
