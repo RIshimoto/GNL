@@ -6,14 +6,13 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:21 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/28 07:33:12 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/29 21:39:37 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 
-//# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
