@@ -6,7 +6,7 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:14 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/30 07:53:04 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/30 07:57:08 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ static int	line_joint(char **p, char **save, char **line)
 	{
 		if ((*line = ft_strjoin(*line, *p, nl - *p)) == NULL)
 			return (ERROR);
-	/*	if (*(nl + 1) == '\0')
-			*save = NULL;
-		else*/
 		if (!(*save = ft_strdup(nl + 1)))
 			return (ERROR);
 		super_free(&ad_p);
