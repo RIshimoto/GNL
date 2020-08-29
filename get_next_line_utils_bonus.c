@@ -6,7 +6,7 @@
 /*   By: rishimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 05:04:29 by rishimot          #+#    #+#             */
-/*   Updated: 2020/08/29 21:39:17 by rishimot         ###   ########.fr       */
+/*   Updated: 2020/08/30 05:11:20 by rishimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,20 @@ char			*ft_strjoin(char *s1, char *s2, size_t s2_length)
 	size_t	t_index;
 	size_t	s1_length;
 	size_t	merge_len;
-	int		i;
+	size_t	i;
 
 	if (s1 == NULL || s2 == NULL)
 		return (0);
 	s1_length = ft_strlen(s1);
 	merge_len = s1_length + s2_length;
 	if ((t = (char *)malloc((merge_len + 1) * sizeof(char))) == NULL)
-		return (0);
+		return (NULL);
 	t_index = 0;
 	i = 0;
-	while (t_index < s1_length)
+	while (i < s1_length)
 		t[t_index++] = s1[i++];
 	i = 0;
-	while (t_index < s2_length)
+	while (i < s2_length)
 		t[t_index++] = s2[i++];
 	t[t_index] = '\0';
 	super_free(&s1);
