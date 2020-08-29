@@ -41,6 +41,7 @@ int main(int argc, char **argv)
 	//r = rand() % 1; 
 	while (0 < (i = get_next_line(fd, &line)))
 	{
+		printf("fd : %d\n", fd);
 		printf("%d return flag : %d : '%s'\n", l, i, line);
 		l++;
 		free(line);
