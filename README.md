@@ -1,7 +1,9 @@
 ## 概要
-42Tokyoの課題の一つ。GNLは「Get Next Line」の略。</br>
+42Tokyo[^1]の課題の一つ。GNLは「Get Next Line」の略。</br>
 関数get_next_lineをループで呼び出すと、ファイルディスクリプタのテキストをEOFまで
 1行ずつEOFまで読むことができる。
+
+[^1]:https://42tokyo.jp/
 
 ## 機能
 - ファイルからテキストを読み込む
